@@ -2,49 +2,55 @@ function name() {
     var name = prompt("what is your name?")
     alert(`hello ${name}`)
     return name
-
-}
-name()
-
-function ask() {
+ 
+ }
+ name()
+ 
+ function ask() {
     var f_or_c = prompt("what temperature do you want to convert to? (f) or (c)")
-    if (f_or_c == "c"){
-        function c() {
-            var t = prompt("enter you temperature in farenheight")
-            var total = ((t - 32) * 5) / 9
-            alert(`your temp in c is ${total}`)
-            return t
-            return total
-        }
-        c()
-    } else if (f_or_c == "f"){
-        function f() {
-            var t = prompt("enter you temperature in celcius")
-            var total =((t * 9) / 5) + 32
-            alert(`your temp in f is ${total}`)
-            return t
-            return total
-        }
-        f()
-    }else {
-        alert("you did not enter f or c.")
-    }
-
-
     return f_or_c;
-}
+ }
+ 
+ function c() {
+    var t = prompt("enter you temperature in farenheight")
+    return t
+ }
+ 
+ function f() {
+    var t = prompt("enter you temperature in celcius")
+    return t
+ }
+ 
+ function convert_f() {
+    var total = ((c - 32) * 5) / 9
+    alert(`your temp in c is ${total}`)
+ }
+ 
+ function convert_c() {
+    var total = ((f * 9) / 5) + 32
+    alert(`your temp in f is ${total}`)
+ }
+ 
 
-ask()
-
-
-
-
-
-
-
-
-
-
-
-
+ 
+ var ask = ask();
+ if (ask == "c"){
+    var c = c()
+   
+    convert_f()
+ } else if (ask == "f") {
+    var f = f()
+   
+    convert_c()
+ } else {
+     alert("you didn't enter f or c")
+ }
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
 
