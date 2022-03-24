@@ -12,12 +12,12 @@ function name() {
  }
  
  function c() {
-    var t = prompt("enter you temperature in farenheight")
+    var t = prompt("enter your temperature in farenheight")
     return t
  }
  
  function f() {
-    var t = prompt("enter you temperature in celcius")
+    var t = prompt("enter your temperature in celcius")
     return t
  }
  
